@@ -65,8 +65,10 @@ const CaseStudies = () => (
     </div>
 
     <div className="container-inner" style={styles.content}>
-      <h2 style={styles.header}>Case Studies</h2>
-      <p style={styles.paragraph}>He cases them, she studies them, and just let us handle the rest.</p>
+      <div style={styles.headerContainer}>
+        <h2 style={styles.header}>Case Studies</h2>
+        <p style={styles.paragraph}>He cases them, she studies them, and just let us handle the rest.</p>
+      </div>
 
       <Card title="Geopolotics" theme={t4} />
       <Card title="Geopolotics" theme={t6} />
@@ -86,15 +88,19 @@ const styles = {
   topLeft: {
     marginBottom: '40px'
   },
+  headerContainer: {
+    height: '150px',
+    margin: '0',
+    marginLeft: '5%',
+    marginBottom: '5%',
+  },
   header: {
     textAlign: 'center'
-    // R & I header
   },
   paragraph: {
     textAlign: 'center',
     maxWidth: '90%',
-    color: Colors.textSecondary,
-    marginBottom: '42px'
+    color: Colors.textSecondary
   },
   content: {
     textAlign: 'left',
