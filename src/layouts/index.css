@@ -1,12 +1,15 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #fff;
+  background-color: #171b2b;
 }
 article,
 aside,
@@ -228,7 +231,7 @@ h1 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 75px;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 h2 {
   margin-left: 0;
@@ -240,10 +243,10 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
+  font-size: 40px;
+  line-height: 1.2;
 }
 h3 {
   margin-left: 0;
@@ -606,4 +609,125 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/* Custom CSS */
+
+a {
+  text-decoration: none;
+  color: #fff;
+  opacity: .7;
+  font-weight: 400;
+  transition: opacity 100ms ease-in;
+}
+
+a:hover {
+  opacity: 1;;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 20px;
+  margin: inherit;
+}
+
+.svg-curve-container {
+  position: absolute;
+  height: 100px;
+  bottom: -20px;
+  background: none;
+  width: 100%;
+  width: 100vw;
+  min-width: 800px;
+  z-index: 2;
+}
+
+.svg-curve-container svg {
+  height: 100px;
+  width: 100%;
+}
+
+.section-outer {
+  color: #fff;
+  background: #1b2137;
+  position: relative;
+  min-height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 50px 150px;  /* +100px for svg curve */
+}
+
+.slanted-bottom-border {
+  position: relative;
+}
+
+.section-inner {
+  /* background: rgba(0,0,0,.1); */
+  padding: 40px 20px;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+}
+
+.container-inner {
+  /* background: red; */
+  flex: 1;
+}
+
+.content-section-topbar {
+
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  float: left;
+}
+
+.topbar-container {
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.topbar-container a {
+  margin-left: 24px;
+}
+
+.content-card {
+  position: relative;
+  display: block;
+  width: 75%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(16, 19, 27, 0.24);
+  background: #262e47;
+  margin: 0 auto;
+  padding: 32px;
+  text-align: center;
+}
+
+.content-card p {
+  padding: 8px 0 32px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #bac4e0;
+}
+
+.card-icon {
+  height: 32px;
+  width: 32px;
+  background: #1c2237;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.case-study-cards {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.case-study-cards:hover {
+  box-shadow: rgba(11, 11, 12, 0.8) 0px 8px 20px !important;
 }

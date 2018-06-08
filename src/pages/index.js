@@ -1,15 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import Section from '../components/section';
+import Header from '../components/header';
+import Hero from '../components/hero';
+import ResearchAndInnovation from '../components/sections/researchAndInnovation';
+import CaseStudies from '../components/sections/caseStudies';
+
 const IndexPage = () => (
-  <div style={{
-    background: '#252A2E',
-    color: '#fff'
-  }}>
-    <h1>Simplicity at scale.</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+  <div>
+    <Header />
+    <Hero />
+    <ResearchAndInnovation />
+    <CaseStudies />
+    <ResearchAndInnovation />
   </div>
 );
 
