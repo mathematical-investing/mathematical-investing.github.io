@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
         <Link to="/">Case Studies</Link>
         <Link to="/">Our Team</Link>
         <Link to="/">Investors</Link>
-        <Link to="/">Careers</Link>
+        <Link to="/">Contact Us</Link>
       </div>
     </div>
   </Section>

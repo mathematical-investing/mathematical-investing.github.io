@@ -78,9 +78,11 @@ const CaseStudies = () => (
 
 const styles = {
   cardHeader: {
-    fontSize: '18px',
+    fontSize: '20px',
     fontWeight: '500',
-    margin: '16px'
+    margin: '8px',
+    textAlign: 'center',
+    width: '100%'
   },
   bottomRight: {
     marginLeft: '-30px'
@@ -109,7 +111,8 @@ const styles = {
   },
   card: {
     position: 'relative',
-    display: 'inline-block',
+    display: 'inline-flex',
+    alignItems: 'center',
     verticalAlign: 'top',
     width: '75%',
     height: '150px',
@@ -118,7 +121,7 @@ const styles = {
     background: '#262e47',
     margin: '0',
     padding: '12px',
-    textAlign: 'left'
+    textAlign: 'center'
   }
 }
 
