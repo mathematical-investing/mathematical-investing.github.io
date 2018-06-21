@@ -1,9 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { Colors } from '../constants';
 
-const Container = ({ className, style, children }) => (
-  <div className={className} style={style}>
+const Container = ({ className, style, children, ...props }) => (
+  <div className={className} style={style} {...props}>
     {children}
   </div>
 );
@@ -26,11 +25,11 @@ const SlantedSVG = () => (
   </svg>
 )
 
-const Section = ({ style, bg, curveColor, noCurve, children }) => {
+const Section = ({ id, style, bg, curveColor, noCurve, children }) => {
   return (
     <div style={{ position: 'relative' }}>
       {/* Outer wrapper container */}
-      <Container className="section-outer" style={{
+      <Container id={id} className="section-outer" style={{
         ...style,
         background: bg
       }}>

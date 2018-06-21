@@ -6,7 +6,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Moantserrat', 'Inter UI', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #fff;
   background-color: #171b2b;
@@ -705,7 +705,7 @@ p {
 }
 
 .hero-links a.primary-button {
-  padding: 10px 30px;
+  padding: 8px 30px;
   font-weight: 500;
   background: #fff;
   color: #1c2237;
@@ -740,7 +740,8 @@ p {
 }
 
 .content-card p {
-  padding: 8px 0 32px;
+  text-align: center;
+  padding: 8px 0 16px;
   margin: 0;
   font-size: 16px;
   line-height: 26px;
@@ -768,4 +769,16 @@ p {
 .case-study-cards:hover {
   transform: translateY(-1px);
   box-shadow: rgba(11, 11, 12, 0.8) 0px 8px 20px !important;
+}
+
+.graph-background {
+  position: absolute;
+  background: transparent;
+  left: -650px;
+  right: 0;
+  top: -121px;
+  bottom: 0;
+  height: 970px;
+  width: 2958px;
+  z-index: 1;
 }

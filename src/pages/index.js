@@ -1,11 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
-
-import Section from '../components/section';
 import Header from '../components/header';
 import Hero from '../components/hero';
 import ResearchAndInnovation from '../components/sections/researchAndInnovation';
 import CaseStudies from '../components/sections/caseStudies';
+import OurTeam from '../components/sections/ourTeam';
+import Footer from '../components/sections/footer';
 
 const IndexPage = () => (
   <div>
@@ -13,7 +12,8 @@ const IndexPage = () => (
     <Hero />
     <ResearchAndInnovation />
     <CaseStudies />
-    <ResearchAndInnovation />
+    <OurTeam />
+    <Footer />
   </div>
 );
 

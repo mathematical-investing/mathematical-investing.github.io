@@ -9,7 +9,7 @@ import IconMath from '../../img/icons/math.png';
 const t1 = {
   background: 'linear-gradient(48deg, #fe75b6 25%, #fbcc6b 100%)'
 }
-
+// backgroundImage: `url(${BostonBackground})`,
 const t2 = {
   background: 'linear-gradient(48deg, #0ede9a 40%, #07f5f1 100%)'
 }
@@ -38,25 +38,10 @@ function Card({ title, theme, icon, children, style, ...props }) {
   );
 }
 
-const ResearchAndInnovation = () => (
-  <Section id="research-and-innovation" bg={Colors.altPrimary}>
+const Footer = () => (
+  <Section id="research-and-innovation" noCurve={true}>
     <div className="container-inner" style={styles.content}>
-      <h2 style={styles.header}>Research & Innovation</h2>
-      <p style={styles.paragraph}>Our easy-to-use control panel and API let you spend more time coding and less time managing your infrastructure.</p>
-
-      <Card title="Pure Mathematics" theme={t1} icon={IconMath}>
-        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one cloud to help.
-      </Card>
-    </div>
-
-    <div className="container-inner" style={styles.content}>
-      <Card style={styles.topRight} title="Data Analytics" theme={t2} icon={IconGraph}>
-        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one.
-      </Card>
-
-      <Card style={styles.bottomRight} title="Geopolotics" theme={t3} icon={IconEarth}>
-        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one cloud to help teams spend more time.
-      </Card>
+      footer
     </div>
   </Section>
 );
@@ -82,9 +67,11 @@ const styles = {
   },
   content: {
     textAlign: 'center',
+    fontSize: '14px',
     margin: '0 auto',
+    opacity: 0.5,
     maxWidth: '960px',
   }
 }
 
-export default ResearchAndInnovation;
+export default Footer;
