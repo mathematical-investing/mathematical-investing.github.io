@@ -30,7 +30,10 @@ function Icon({ theme = {}, icon, ...props }) {
 
 function Card({ title, theme, icon, children, style, ...props }) {
   return (
-    <div className="content-card" style={{ ...style, ...theme }}>
+    <div className="content-card" style={{
+      ...style,
+      // ...theme
+    }}>
       <Icon icon={icon} />
       <h3 style={styles.cardHeader}>{title}</h3>
       <p>{children}</p>
