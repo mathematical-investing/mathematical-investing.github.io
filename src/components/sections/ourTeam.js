@@ -2,25 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Section from '../section';
 import { Colors } from '../../constants';
-import IconEarth from '../../img/icons/earth.png';
-import IconGraph from '../../img/icons/graph.png';
-import IconMath from '../../img/icons/math.png';
+import ProfileNickZuber from '../../img/icons/me.jpg';
 
-const t1 = {
-  background: 'linear-gradient(48deg, #fe75b6 25%, #fbcc6b 100%)'
-}
-// backgroundImage: `url(${BostonBackground})`,
-const t2 = {
-  background: 'linear-gradient(48deg, #0ede9a 40%, #07f5f1 100%)'
-}
+let _id = 0;
 
-const t3 = {
-  background: 'linear-gradient(48deg, #bf8dfc 35%, #30d9e7 100%)'
-}
-
-function Icon({ theme = {}, icon, ...props }) {
+function ProfileIcon({ theme = {}, icon, ...props }) {
   return (
-    <div className="card-icon" style={{
+    <div className="card-icon-profile" style={{
       ...theme,
       backgroundImage: `url(${icon})`
     }}>
@@ -28,12 +16,16 @@ function Icon({ theme = {}, icon, ...props }) {
   );
 }
 
-function Card({ title, theme, icon, children, style, ...props }) {
+function Card({ title, icon, children, style, ...props }) {
+  const cardId = ++_id;
   return (
-    <div className="content-card" style={{ ...style, ...theme }}>
-      <Icon icon={icon} />
+    <div className="content-card" style={{
+      ...style,
+      float: cardId % 2 !== 0 ? 'left' : 'right'
+    }}>
+      <ProfileIcon icon={icon} />
       <h3 style={styles.cardHeader}>{title}</h3>
-      <p>{children}</p>
+      <p style={styles.cardParagraph}>{children}</p>
     </div>
   );
 }
@@ -43,17 +35,38 @@ const OurTeam = () => (
     <div className="container-inner" style={styles.content}>
       <h2 id="our-team" style={styles.header}>Meet Our Team</h2>
       <p style={styles.paragraph}>It really doesn't get much better than this, we're a dedicated team of just a couple of guys being dudes, and maybe a few dudes being guys.</p>
+
+      <Card title="Alejandro Lopez" icon={ProfileNickZuber} style={styles.userCard}>
+        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one cloud to help.
+      </Card>
+
+      <Card title="Michael Mills" icon={ProfileNickZuber} style={styles.userCard}>
+        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one cloud to help.
+      </Card>
+
+      <Card title="Nicolas Spoors" icon={ProfileNickZuber} style={styles.userCard}>
+        From effortless administration tools to robust compute, storage, and networking services, we provide an all-in-one cloud to help.
+      </Card>
     </div>
   </Section>
 );
 
 const styles = {
+  userCard: {
+    width: '70%',
+    display: 'block',
+    margin: '40px 10px',
+    padding: '18px 32px'
+  },
   cardHeader: {
     fontSize: '20px',
     fontWeight: '500',
-    margin: '24px 0 12px',
+    margin: '12px 0 12px',
     textAlign: 'center',
     width: '100%'
+  },
+  cardParagraph: {
+    textAlign: 'left'
   },
   bottomRight: {
     marginLeft: '15px'
