@@ -8,7 +8,9 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gud": "^1.0.0",
     "react-helmet": "^5.2.0",
+    "react-visibility-sensor": "^3.11.0",
     "scroll-into-view-if-needed": "^2.2.7",
     "victory": "^0.27.0"
   },

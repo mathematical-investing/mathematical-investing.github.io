@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import VisibilityTrigger from '../visibilityTrigger';
+import gud from 'gud'
 import Section from '../section';
 import { Colors } from '../../constants';
 import IconEarth from '../../img/icons/earth.png';
@@ -29,12 +30,15 @@ function Icon({ theme = {}, icon, ...props }) {
 }
 
 function Card({ title, theme, icon, children, style, ...props }) {
+  const id = gud();
+  const nodeId = `content-card-${id}`;
   return (
-    <div className="content-card" style={{
+    <div id={nodeId} className="content-card animate-in-waiting" style={{
       ...style,
       // ...theme
     }}>
       <Icon icon={icon} />
+      <VisibilityTrigger nodeId={nodeId} />
       <h3 style={styles.cardHeader}>{title}</h3>
       <p>{children}</p>
     </div>

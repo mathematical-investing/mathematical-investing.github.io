@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import VisibilityTrigger from '../visibilityTrigger';
+import gud from 'gud';
 import Section from '../section';
 import { Colors } from '../../constants';
 
@@ -40,17 +41,21 @@ const t6 = {
 
 
 function Card({ title, children, style, theme, ...props }) {
+  const id = gud();
+  const nodeId = `content-card-${id}`;
   return (
     <div
-      className="case-study-cards"
+      id={nodeId}
+      className="case-study-cards animate-in-waiting"
       style={{
         ...styles.card,
         ...style,
         ...theme
       }}>
+      <VisibilityTrigger nodeId={nodeId} />
       <h3 style={styles.cardHeader}>{title}</h3>
       <p>{children}</p>
-    </div>
+    </div >
   );
 }
 
