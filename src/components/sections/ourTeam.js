@@ -33,7 +33,7 @@ function Card({ title, icon, children, style, ...props }) {
 const OurTeam = () => (
   <Section id="research-and-innovation" bg={Colors.altPrimary}>
     <div className="container-inner" style={styles.content}>
-      <h2 id="our-team" style={styles.header}>Meet Our Team</h2>
+      <h2 id="our-team">Meet Our Team</h2>
       <p style={styles.paragraph}>It really doesn't get much better than this, we're a dedicated team of just a couple of guys being dudes, and maybe a few dudes being guys.</p>
 
       <Card title="Alejandro Lopez" icon={ProfileNickZuber} style={styles.userCard}>
@@ -61,8 +61,8 @@ const styles = {
   cardHeader: {
     fontSize: '20px',
     fontWeight: '500',
-    margin: '12px 0 12px',
-    textAlign: 'center',
+    margin: '12px 0 12px 50px',
+    textAlign: 'left',
     width: '100%'
   },
   cardParagraph: {
