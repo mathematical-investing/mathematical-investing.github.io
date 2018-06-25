@@ -1,39 +1,19 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Section from '../section';
+import LogoImage from '../../img/logo.png';
 import { Colors } from '../../constants';
-import IconEarth from '../../img/icons/earth.png';
-import IconGraph from '../../img/icons/graph.png';
-import IconMath from '../../img/icons/math.png';
 
-const t1 = {
-  background: 'linear-gradient(48deg, #fe75b6 25%, #fbcc6b 100%)'
-}
-// backgroundImage: `url(${BostonBackground})`,
-const t2 = {
-  background: 'linear-gradient(48deg, #0ede9a 40%, #07f5f1 100%)'
-}
-
-const t3 = {
-  background: 'linear-gradient(48deg, #bf8dfc 35%, #30d9e7 100%)'
-}
-
-function Icon({ theme = {}, icon, ...props }) {
+function FlexDiv({ children, flex, style, ...props }) {
   return (
-    <div className="card-icon" style={{
-      ...theme,
-      backgroundImage: `url(${icon})`
-    }}>
-    </div>
-  );
-}
-
-function Card({ title, theme, icon, children, style, ...props }) {
-  return (
-    <div className="content-card" style={{ ...style, ...theme }}>
-      <Icon icon={icon} />
-      <h3 style={styles.cardHeader}>{title}</h3>
-      <p>{children}</p>
+    <div
+      className="footer-section"
+      style={{
+        ...style,
+        flex
+      }}
+      {...props}
+    >
+      {children}
     </div>
   );
 }
@@ -41,7 +21,42 @@ function Card({ title, theme, icon, children, style, ...props }) {
 const Footer = () => (
   <Section id="research-and-innovation" noCurve={true}>
     <div className="container-inner" style={styles.content}>
-      footer
+      <FlexDiv flex={2}>
+        <img className="logo-footer" src={LogoImage} />
+        <p>© 2018 Mathematical Investments<br />All rights reserved.</p>
+        <p>asd</p>
+      </FlexDiv>
+
+      <FlexDiv flex={1}>
+        <h6>Company</h6>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+      </FlexDiv>
+
+      <FlexDiv flex={1}>
+        <h6>Resources</h6>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+      </FlexDiv>
+
+      <FlexDiv flex={1}>
+        <h6>Support</h6>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+      </FlexDiv>
+
+      <FlexDiv flex={1}>
+        <h6>Extra</h6>
+        <p>Footer</p>
+        <p>Footer</p>
+        <p>Footer</p>
+      </FlexDiv>
+
     </div>
   </Section>
 );
@@ -66,10 +81,10 @@ const styles = {
     marginBottom: '60px'
   },
   content: {
-    textAlign: 'center',
+    display: 'flex',
+    textAlign: 'left',
     fontSize: '14px',
     margin: '0 auto',
-    opacity: 0.5,
     maxWidth: '960px',
   }
 }

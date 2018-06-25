@@ -746,8 +746,7 @@ p {
   font-size: 16px;
   line-height: 26px;
   /* color: #bac4e0; */
-  color: rgba(255, 255, 255, .8);
-  color: #fff;
+  color: rgba(255, 255, 255, .7);
   font-weight: 400;
 }
 
@@ -799,4 +798,26 @@ p {
   height: 970px;
   width: 2958px;
   z-index: 1;
+}
+
+.logo-footer {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  }
+
+.footer-section {
+  flex: 1;
+  padding: 0 15px 0 0;
+}
+
+.footer-section p {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-top: 5px;
+}
+
+.footer-section h6 {
+  margin: 0 0 15px;
+  font-weight: 400;
 }
