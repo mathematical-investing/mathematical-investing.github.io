@@ -40,7 +40,7 @@ const t6 = {
 }
 
 
-function Card({ title, children, style, theme, ...props }) {
+function Card({ title, children, style, theme, offset, ...props }) {
   const id = gud();
   const nodeId = `content-card-${id}`;
   return (
@@ -52,8 +52,8 @@ function Card({ title, children, style, theme, ...props }) {
         ...style,
         ...theme
       }}>
-      <VisibilityTrigger nodeId={nodeId} />
-      <h3 style={styles.cardHeader}>{title}</h3>
+      <VisibilityTrigger nodeId={nodeId} offset={offset * 1.5} />
+      < h3 style={styles.cardHeader}>{title}</h3>
       <p>{children}</p>
     </div >
   );
@@ -62,11 +62,11 @@ function Card({ title, children, style, theme, ...props }) {
 const CaseStudies = () => (
   <Section curveColor={Colors.altPrimary}>
     <div className="container-inner" style={styles.content}>
-      <Card title="Pure Mathematics" theme={t1} />
-      <Card title="Pure Mathematics" theme={t2} />
+      <Card title="Pure Mathematics" theme={t1} offset={0} />
+      <Card title="Pure Mathematics" theme={t2} offset={50} />
 
-      <Card title="Data Analytics" theme={t3} />
-      <Card title="Data Analytics" theme={t5} />
+      <Card title="Data Analytics" theme={t3} offset={100} />
+      <Card title="Data Analytics" theme={t5} offset={150} />
     </div>
 
     <div className="container-inner" style={styles.content}>
@@ -75,8 +75,8 @@ const CaseStudies = () => (
         <p style={styles.paragraph}>He cases them, she studies them, and just let us handle the rest.</p>
       </div>
 
-      <Card title="Geopolotics" theme={t4} />
-      <Card title="Geopolotics" theme={t6} />
+      <Card title="Geopolotics" theme={t4} offset={200} />
+      <Card title="Geopolotics" theme={t6} offset={250} />
     </div>
   </Section>
 );
