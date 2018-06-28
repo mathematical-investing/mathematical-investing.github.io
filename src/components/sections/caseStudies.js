@@ -52,7 +52,7 @@ function Card({ title, children, style, theme, offset, ...props }) {
         ...style,
         ...theme
       }}>
-      <VisibilityTrigger nodeId={nodeId} offset={offset * 1.5} />
+      <VisibilityTrigger nodeId={nodeId} offset={offset * 1.25} />
       < h3 style={styles.cardHeader}>{title}</h3>
       <p>{children}</p>
     </div >
